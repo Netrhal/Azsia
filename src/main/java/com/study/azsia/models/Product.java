@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "products")
 public class Product {
 
     private String name;
@@ -19,6 +20,7 @@ public class Product {
     @Id
     private Long id;
     @Enumerated(EnumType.STRING)
+    @Column(name = "prodclass")
     private ProdClass prodClass;
     private String description;
     private Long price;
