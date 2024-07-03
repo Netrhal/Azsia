@@ -16,14 +16,14 @@ import lombok.NoArgsConstructor;
 public class Product {
 
     private String name;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Enumerated(EnumType.STRING)
     @Column(name = "prodclass")
     private ProdClass prodClass;
     private String description;
-    private Long price;
+    private Double price;
 
 
 }
