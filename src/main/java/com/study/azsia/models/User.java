@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -22,5 +24,7 @@ public class User {
     private String password;
     @Enumerated(EnumType.STRING)
     private Role access;
+    @OneToMany(mappedBy ="user")
+    private Set<Address> addresses;
 
 }
